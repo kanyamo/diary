@@ -3,6 +3,7 @@ from django.views import generic
 from .forms import InquiryForm
 import logging
 from django.urls import reverse_lazy
+from django.contrib import messages
 
 logger = logging.getLogger(__name__)  # ロガーを取得
 
@@ -18,6 +19,7 @@ class InquiryView(generic.FormView):
 
     def form_valid(self, form):
         form.send_email()  # メール送信メソッドを取得
+        messages.success(self.request, 'メッセージを送信しました。')
         logger.info('Inquiry sent by {}'.format(
-            form.cleand_data['name']))  # ログを出力
+            form.cleaned_data['name']))  # ログを出力
         return super().form_valid(form)

@@ -27,7 +27,7 @@ class InquiryForm(forms.Form):
         message = self.cleaned_data['message']
 
         subject = 'お問い合わせ {}'.format(title)
-        message = '送信者名: {0}\nメールアドレス: {1}\nメッセージ: {2}'.fomrat(
+        message = '送信者名: {0}\nメールアドレス: {1}\nメッセージ: {2}'.format(
             name, email, message)
         from_email = 'admin@example.com'
         to_list = [

@@ -12,9 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -120,4 +121,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # メール
 # 開発環境ではconsoleにメール内容を表示したいため、.envファイルにはEMAIL_BACKENDを記述せず、本番環境ではメール送信をしっかり行うため.envファイルにはEMAIL_BACKENDを記述
 EMAIL_BACKEND = os.getenv(
-    "EMAIL_BACKEND", "django.core.mail.backends.console.ConsoleBackend")
+    "EMAIL_BACKEND", "django.core.mail.backends.console.EmailBackend")
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'alert alert-danger',
+    messages.WARNING: 'alert alert-warning',
+    messages.SUCCESS: 'alert alert-success',
+    messages.INFO: 'alert alert-info',
+}

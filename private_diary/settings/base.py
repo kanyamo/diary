@@ -67,7 +67,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
 
 # ログイン・ログアウト後の遷移先を設定
-LOGIN_REDIRECT_URL = 'diary:index'
+LOGIN_REDIRECT_URL = 'diary:diary_list'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 # ログアウトリンクのクリック一発でログアウトする設定
@@ -144,11 +144,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'  # 各アプリケーションごとに
+STATIC_URL = '/static/'  # 各アプリケーションごとに
 
 STATICFILES_DIRS = [  # プロジェクト全体に関する静的ファイル
     os.path.join(BASE_DIR, 'static')
 ]
+
+MEDIA_URL = '/media/'  # 画像を配信するURLのホスト名以下のルートURL
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

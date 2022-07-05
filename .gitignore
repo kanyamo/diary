@@ -1,5 +1,6 @@
 .env
 venv_private_diary/
+media/
 
 ### Django ###
 *.log

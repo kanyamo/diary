@@ -63,3 +63,5 @@ LOGGING = {
         },
     }
 }
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # メディアファイルの配置場所を指定している

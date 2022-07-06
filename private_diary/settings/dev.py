@@ -38,7 +38,7 @@ LOGGING = {
         # diaryアプリケーションが利用するロガー
         'diary': {
             'handlers': ['console'],
-            'lavel': 'DEBUG',
+            'level': 'DEBUG',
         },
     },
 

@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load django_bootstrap5 %}
 
 {% block title %}Log In | Private Diary{% endblock %}
 
@@ -12,9 +11,8 @@
             <h1>ログイン</h1>
             <form method="post" action="{% url 'account_login' %}">
                 {% csrf_token %}
-                <div class="mb-4 col-4">
-                    {% bootstrap_form form %}
-                </div>
+                
+                {{ form.as_p }}
 
                 {% if redirect_firld_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">

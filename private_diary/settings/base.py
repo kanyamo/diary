@@ -51,15 +51,15 @@ INSTALLED_APPS = [
 # django-allauthで利用するdjango.contrib.sitesを使うためにサイト識別用IDを設定
 SITE_ID = 1
 
-AUTHENTIFICATION_BACKENDS = (
+AUTHENTICATION_BACKENDS = (
     # 一般ユーザー用(メールアドレス認証)
-    'allauth.account.auth_backends.AuthentificationBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
     # 管理サイト用(ユーザー名認証)
-    'django.contib.auth.backends.ModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
 )
 
 # メールアドレス認証に変更する設定
-ACCOUNT_AUTHENTIFICATION_METHOD = 'email'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_USERNAME_REQUIRED = False
 
 # サインアップにメールアドレス確認をはさむよう設定

@@ -8,5 +8,3 @@ media/
 *.pyc
 __pycache__/
 db-volumes/
-
-de.sqlite3

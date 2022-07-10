@@ -4,7 +4,7 @@ from .utils import strtobool
 DEBUG = strtobool(os.getenv("DEBUG", "n"))
 
 # 許可するホスト名のリスト
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
+ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
 
 # 静的ファイルを配置する場所(本番環境ではWebサーバから配信)
 STATIC_ROOT = '/usr/share/nginx/html/static'

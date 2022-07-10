@@ -2,7 +2,7 @@
 venv_private_diary/
 media/
 
-.python-version/
+.python-version
 
 ### Django ###
 *.log

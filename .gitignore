@@ -2,6 +2,8 @@
 venv_private_diary/
 media/
 
+.python-version/
+
 ### Django ###
 *.log
 *.pot

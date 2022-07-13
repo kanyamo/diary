@@ -15,6 +15,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'private_diary.settings.dev')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'private_diary.settings.prod')
 
 application = get_wsgi_application()

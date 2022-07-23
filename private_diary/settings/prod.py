@@ -16,7 +16,9 @@ AWS_SES_SECRET_ACCESS_KEY = os.getenv('AWS_SES_SECRET_ACCESS_KEY')
 EMAIL_BACKEND = 'django_ses.SESBackend'
 AWS_SES_REGION_NAME = "ap-northeast-1"
 AWS_SES_REGION_ENDPOINT = f"email.{AWS_SES_REGION_NAME}.amazonaws.com"
-
+AWS_SES_SOURCE_ARN = os.getenv('AWS_SES_SOURCE_ARN')
+AWS_SES_FROM_ARN = os.getenv('AWS_SES_FROM_ARN')
+AWS_SES_RETURN_PATH_ARN = os.getenv('AWS_SES_RETURN_PATH_ARN')
 
 # 本番時のロギング設定
 LOGGING = {

@@ -3,6 +3,8 @@ from .utils import strtobool
 
 DEBUG = strtobool(os.getenv("DEBUG", "n"))
 
+INSTALLED_APPS += ['django_ses']
+
 # 許可するホスト名のリスト
 ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
 

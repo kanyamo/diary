@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'django_bootstrap5',
-    'django_ses',
 ]
 
 # django-allauthで利用するdjango.contrib.sitesを使うためにサイト識別用IDを設定

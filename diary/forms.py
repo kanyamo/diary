@@ -30,9 +30,9 @@ class InquiryForm(forms.Form):
         subject = 'お問い合わせ {}'.format(title)
         message = '送信者名: {0}\nメールアドレス: {1}\nメッセージ: {2}'.format(
             name, email, message)
-        from_email = 'admin@example.com'
+        from_email = 'kanajir@icloud.com'
         to_list = [
-            'test@example.com'
+            'kanajir@icloud.com'
         ]
         cc_list = [
             email

@@ -172,8 +172,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # メール
 # 開発環境ではconsoleにメール内容を表示したいため、.envファイルにはEMAIL_BACKENDを記述せず、本番環境ではメール送信をしっかり行うため.envファイルにはEMAIL_BACKENDを記述
-EMAIL_BACKEND = os.getenv(
-    "EMAIL_BACKEND", "django.core.mail.backends.console.EmailBackend")
+EMAIL_BACKEND = os.getenv("EMAIL_BACKEND", "django.core.mail.backends.console.EmailBackend")
 
 MESSAGE_TAGS = {
     messages.ERROR: 'alert alert-danger',

@@ -182,4 +182,4 @@ MESSAGE_TAGS = {
 }
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
-DEFAULT_FROM_EMAIL = 'kanajir@icloud.com'
+DEFAULT_FROM_EMAIL = os.getenv('FROM_EMAIL', 'info@kanyamo.com')
